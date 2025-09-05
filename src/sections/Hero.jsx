@@ -7,10 +7,10 @@ function Hero() {
       <div className="hero-container">
         {/* Left Column */}
         <div className="hero-text">
-          <h1>Hi, I’m <span className="highlight">Your Name</span></h1>
+          <h1>Hi, I’m <span className="highlight">Kushan ,alintha</span></h1>
           <p>
-            I’m a passionate <strong>Software Developer</strong> who loves building 
-            web applications and exploring new technologies.
+            I’m a passionate <strong>Computer Engineer</strong> who loves building 
+            applications and exploring new technologies.
           </p>
 
           <div className="hero-links">
@@ -26,7 +26,7 @@ function Hero() {
         {/* Right Column */}
         <div className="hero-image">
           <div className="image-wrapper">
-            <img src="./assets/profile.jpg" alt="Profile" />
+            <img src="/src/assets/profile.jpg" alt="Profile" />
           </div>
         </div>
       </div>
