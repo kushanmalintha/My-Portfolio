@@ -2,9 +2,6 @@
   background: #000000;
   padding: 100px 20px;
   display: flex;
-  align-items: center;
-  justify-items: center;
-  min-height: 100vh;
 }
 
 .hero-container {
@@ -14,6 +11,10 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
+}
+
+.hero-text {
+    margin-left: 20%;
 }
 
 /* Left Column (Text) */
