@@ -13,15 +13,12 @@
   gap: 40px;
 }
 
-.hero-text {
-    margin-left: 20%;
-}
-
 /* Left Column (Text) */
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
   color: #ffffff;
+  text-align: center;
 }
 
 .hero-text .highlight {
@@ -32,11 +29,13 @@
   font-size: 1.1rem;
   margin-bottom: 25px;
   color: #e0e0e0;
+  text-align: center;
 }
 
 .hero-links {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .hero-links a {

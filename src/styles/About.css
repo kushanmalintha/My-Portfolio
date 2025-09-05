@@ -1,0 +1,44 @@
+.about {
+  background: #0d0d0d; /* slightly different from hero for contrast */
+  color: #fff;
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #6c63ff;
+  left: 25%;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-top: 30px;
+  transition: transform 0.3s ease;
+}
+
+.about-text:hover {
+  transform: scale(1.02);
+}
