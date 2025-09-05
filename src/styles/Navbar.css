@@ -25,14 +25,22 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 35px;
 }
 
 .nav-links li a {
   color: #fff; /* white text */
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  padding: 8px 15px;
+}
+
+.nav-links li a.contact-btn {
+  background-color: #fff;
+  color: #000;
+  border-radius: 25px;
+  padding: 8px 20px;
 }
 
 .nav-links li a:hover {
