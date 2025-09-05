@@ -1,0 +1,67 @@
+.skills {
+  background: #0d0d0d; /* dark background */
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #6c63ff;
+  left: 25%;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #1a1a1a;
+  padding: 25px 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Different colors for icons */
+.skill-icon.html { color: #e34f26; }
+.skill-icon.css { color: #264de4; }
+.skill-icon.js { color: #f7df1e; }
+.skill-icon.react { color: #61dbfb; }
+.skill-icon.node { color: #68a063; }
+.skill-icon.mongo { color: #4db33d; }
+.skill-icon.firebase { color: #ffcb2b; }
+.skill-icon.python { color: #3776ab; }
+.skill-icon.cpp { color: #00599c; }
+.skill-icon.git { color: #f34f29; }
+
+.skill-card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
