@@ -1,4 +1,3 @@
-// src/components/ProjectsCarousel.jsx
 import { useState, useRef } from "react";
 import "../styles/Projects.css";
 
