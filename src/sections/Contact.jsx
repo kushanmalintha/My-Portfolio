@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import "../styles/Contact.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
