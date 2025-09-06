@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './styles/App.css'
-import Navbar from './components/Navbar'
+import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
-import Projects from './components/Projects'
-import Education from './components/Experience'
-import Experience from './components/Experience'
+import Projects from './sections/Projects'
+import Experience from './sections/Experience'
+import Contact from './sections/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +19,7 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
+      <Contact />
     </>
   )
 }

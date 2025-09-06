@@ -21,7 +21,7 @@ function Navbar() {
           <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
           <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
           <li><a href="#experience" onClick={handleLinkClick}>Experience</a></li>
-          <li><a href="#achievements" onClick={handleLinkClick}>Achievements</a></li>
+          {/* <li><a href="#achievements" onClick={handleLinkClick}>Achievements</a></li> */}
           <li><a href="#contact" onClick={handleLinkClick} className="contact-btn">Contact Me</a></li>
         </ul>
 

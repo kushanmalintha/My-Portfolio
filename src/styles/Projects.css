@@ -165,13 +165,65 @@
 }
 
 @media (max-width: 768px) {
+  .carousel {
+    padding: 40px 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .cards {
+    height: auto;
+    overflow: visible;
+  }
+
   .card {
-    min-width: 90%;
-    margin: 0 10px;
+    position: relative;
+    min-width: 85%;
+    left: auto;
+    transform: none !important;
+    margin: 0 auto;
+  }
+
+  .card.active {
+    position: relative;
+    transform: none !important;
+    opacity: 1;
+  }
+
+  .card.left-blur,
+  .card.right-blur {
+    position: absolute;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .card.left-blur {
+    transform: translateX(-100%) scale(0.8) !important;
+  }
+
+  .card.right-blur {
+    transform: translateX(100%) scale(0.8) !important;
+  }
+
+  .card.hidden {
+    display: none;
+  }
+
+  /* Adjust card content for mobile */
+  .card img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
   }
 
   .desktop-only {
-    display: none; /* hide buttons on mobile */
+    display: none;
   }
 }
 
