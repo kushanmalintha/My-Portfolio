@@ -1,0 +1,215 @@
+.projects {
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.cards {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 400px;
+  margin: 0 20px;
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card.active {
+  transform: translate(-50%, 0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.card.left-blur {
+  transform: translate(-150%, 0) scale(0.8) rotateY(10deg);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.card.right-blur {
+  transform: translate(50%, 0) scale(0.8) rotateY(-10deg);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.card.hidden {
+  transform: translate(-50%, 0) scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hover effects */
+.card.left-blur:hover {
+  transform: translate(-150%, 0) scale(0.85) rotateY(5deg);
+  opacity: 0.8;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+.card.right-blur:hover {
+  transform: translate(50%, 0) scale(0.85) rotateY(-5deg);
+  opacity: 0.8;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+.card.active:hover {
+  transform: translate(-50%, -10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+}
+
+/* Smooth cursor animation */
+.carousel-card.left:hover::after,
+.carousel-card.right:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(108, 99, 255, 0.4);
+  animation: pulseGlow 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+  }
+}
+
+/* Dim active card when hovering a side card */
+.carousel-card.left:hover ~ .carousel-card.active,
+.carousel-card.right:hover ~ .carousel-card.active {
+  opacity: 0.6;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Desktop Nav Buttons */
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s;
+  z-index: 3;
+}
+
+.nav-btn:hover {
+  color: #6c63ff;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+/* Only show buttons on desktop */
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 90%;
+    margin: 0 10px;
+  }
+
+  .desktop-only {
+    display: none; /* hide buttons on mobile */
+  }
+}
+
+/* Video Modal */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.video-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+}
+
+.video-content video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
