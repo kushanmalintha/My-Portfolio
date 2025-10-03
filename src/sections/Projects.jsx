@@ -4,10 +4,10 @@ import "../styles/Projects.css";
 const projects = [
   { 
     id: 1, 
-    title: "Project One", 
-    image: "/My-Portfolio/project.jpg",
-    description: "Description of project one", 
-    video: "https://www.w3schools.com/html/mov_bbb.mp4" 
+    title: "GameHub", 
+    image: "/My-Portfolio/gamehub.jpg",
+    description: "A fun and interactive platform for playing challenging and engaging multiplayer and single-player games.", 
+    video: "/My-Portfolio/gamehub.mp4" 
   },
   { 
     id: 2, 
