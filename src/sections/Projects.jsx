@@ -7,7 +7,7 @@ const projects = [
     title: "GameHub", 
     image: "/My-Portfolio/gamehub.jpg",
     description: "A fun and interactive platform for playing challenging and engaging multiplayer and single-player games.", 
-    video: "/My-Portfolio/gamehub.mp4" 
+    video: "/My-Portfolio/gamehub.mp4"
   },
   { 
     id: 2, 
