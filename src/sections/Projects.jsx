@@ -1,4 +1,6 @@
+
 import { useState, useRef } from "react";
+import { SiFlutter, SiFirebase } from "react-icons/si";
 import "../styles/Projects.css";
 
 const projects = [
@@ -7,14 +9,19 @@ const projects = [
     title: "GameHub", 
     image: "/My-Portfolio/gamehub.jpg",
     description: "A fun and interactive platform for playing challenging and engaging multiplayer and single-player games.", 
-    video: "/My-Portfolio/gamehub.mp4"
+    video: "/My-Portfolio/gamehub.mp4",
+    tech: [<SiFlutter key="flutter" title="Flutter" size={24} color="#02569B" />]
   },
   { 
     id: 2, 
-    title: "Project Two", 
-    image: "/My-Portfolio/project.jpg",
-    description: "Description of project two", 
-    video: "https://www.w3schools.com/html/mov_bbb.mp4" 
+    title: "MyFinance", 
+    image: "/My-Portfolio/myfinance.jpg",
+    description: "Description of project twoA personal finance app to track income, expenses, budgets, and reports with a simple, intuitive interface.", 
+    video: "/My-Portfolio/myfinance.mp4", 
+    tech: [
+      <SiFlutter key="flutter" title="Flutter" size={24} color="#02569B" />,
+      <SiFirebase key="firebase" title="Firebase" size={24} color="#FFCA28" />
+    ]
   },
   { 
     id: 3, 
@@ -105,6 +112,11 @@ export default function Projects() {
                 <div className="card-content">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  {project.tech && (
+                    <div className="project-tech-icons">
+                      {project.tech}
+                    </div>
+                  )}
                 </div>
               </div>
             );
