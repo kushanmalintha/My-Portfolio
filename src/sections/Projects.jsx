@@ -1,6 +1,6 @@
 
 import { useState, useRef } from "react";
-import { SiFlutter, SiFirebase } from "react-icons/si";
+import { SiFlutter, SiFirebase, SiNodedotjs, SiMysql } from "react-icons/si";
 import "../styles/Projects.css";
 
 const projects = [
@@ -25,10 +25,15 @@ const projects = [
   },
   { 
     id: 3, 
-    title: "Project Three", 
-    image: "/My-Portfolio/project.jpg",
-    description: "Description of project three", 
-    video: "https://www.w3schools.com/html/mov_bbb.mp4" 
+    title: "Book Wallet", 
+    image: "/My-Portfolio/bookwallet.jpg",
+    description: "A social reading app that helps users discover books, share reviews, join groups, and manage their personal library.", 
+    video: "/My-Portfolio/bookwallet.mp4",
+    tech: [
+      <SiFlutter key="flutter" title="Flutter" size={24} color="#02569B" />,
+      <SiNodedotjs key="nodejs" title="Node.js" size={24} color="#339933" />,
+      <SiMysql key="mysql" title="MySQL" size={24} color="#4479A1" />
+    ]
   },
   { 
     id: 4, 
